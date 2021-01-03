@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_skeleton_v2/src/bloc/bloc_provider.dart';
 import 'package:flutter_skeleton_v2/src/bloc/homeRoot/home_root_bloc.dart';
-import 'package:flutter_skeleton_v2/src/home_root_screen.dart';
+import 'package:flutter_skeleton_v2/src/screen/homeRoot/home_root_screen.dart';
 import 'package:flutter_skeleton_v2/src/utilities/utilities.dart';
 
 class App extends StatefulWidget {
