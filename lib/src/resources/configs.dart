@@ -11,11 +11,11 @@ class Configs {
   static const String _devBuildNumber = '.0';
 
   static const _baseUrlStaging = [
-    'staging.com',
+    'https://run.mocky.io/v3/',
   ];
 
   static const _baseUrlProduction = [
-    'prod.com',
+    'https://run.mocky.io/v3/',
   ];
 
   static String get getDevBuildNumber {

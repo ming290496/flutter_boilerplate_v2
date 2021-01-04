@@ -8,7 +8,7 @@ class Repository {
   ApiHelper apiProvider = ApiHelper();
 
   //HOME
-  static const String HOME = 'home/home/';
+  static const String HOME = 'ea467f7a-a7b9-4627-99d9-38636ba2adb9/';
 
   //GET
   Future<HomeResponseModel> getHomeList() async {
