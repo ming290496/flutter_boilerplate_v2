@@ -15,7 +15,7 @@ class NotificationBloc extends Bloc {
   Stream<ApiResponse<List<NotificationListModel>>> get notificationList =>
       _notificationList.stream;
 
-  Function(ApiResponse<List<NotificationListModel>>) get addnotificationList =>
+  Function(ApiResponse<List<NotificationListModel>>) get addNotificationList =>
       _notificationList.sink.add;
 
   ApiResponse<List<NotificationListModel>> get notificationListValue =>
@@ -26,12 +26,12 @@ class NotificationBloc extends Bloc {
   }
 
   void getData() async {
-    addnotificationList(ApiResponse.loading());
+    addNotificationList(ApiResponse.loading());
     try {
       final result = await repository.getNotificationList();
-      addnotificationList(ApiResponse.completed(result.data));
+      addNotificationList(ApiResponse.completed(result.data));
     } catch (e) {
-      addnotificationList(ApiResponse.error(e.toString()));
+      addNotificationList(ApiResponse.error(e.toString()));
     }
   }
 

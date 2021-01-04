@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 import 'package:flutter_skeleton_v2/src/models/home/home_list_response_model.dart';
 import 'package:flutter_skeleton_v2/src/models/notification/notification_list_response_model.dart';
+import 'package:flutter_skeleton_v2/src/models/profile/profile_detail_response_model.dart';
 import 'package:flutter_skeleton_v2/src/resources/api_helper.dart';
 
 class Repository {
@@ -15,6 +16,9 @@ class Repository {
   static const String NOTIFICATION_LIST =
       '93212703-1e83-4200-adb0-2138efe9ca9c/';
 
+  //PROFILE
+  static const String PROFILE_DETAIL = '248c4826-bd5e-4755-9301-de2626e458e9/';
+
   //GET
   Future<HomeListResponseModel> getHomeList() async {
     final response = await apiProvider.get(HOME_LIST);
@@ -26,6 +30,13 @@ class Repository {
   Future<NotificationListResponseModel> getNotificationList() async {
     final response = await apiProvider.get(NOTIFICATION_LIST);
     final result = NotificationListResponseModel.fromJson(response);
+    return result;
+  }
+
+  //GET
+  Future<ProfileDetailResponseModel> getProfileDetail() async {
+    final response = await apiProvider.get(PROFILE_DETAIL);
+    final result = ProfileDetailResponseModel.fromJson(response);
     return result;
   }
 }
