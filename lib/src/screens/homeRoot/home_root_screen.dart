@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_skeleton_v2/src/blocs/bloc_provider.dart';
+import 'package:flutter_skeleton_v2/src/blocs/home/home_bloc.dart';
 import 'package:flutter_skeleton_v2/src/blocs/homeRoot/home_root_bloc.dart';
+import 'package:flutter_skeleton_v2/src/blocs/notification/notification_bloc.dart';
+import 'package:flutter_skeleton_v2/src/blocs/profile/profile_bloc.dart';
 import 'package:flutter_skeleton_v2/src/screens/home/home_screen.dart';
 import 'package:flutter_skeleton_v2/src/screens/notification/notification_screen.dart';
 import 'package:flutter_skeleton_v2/src/screens/profile/profile_screen.dart';
@@ -11,6 +14,34 @@ class HomeRootScreen extends StatefulWidget {
 }
 
 class _HomeRootScreenState extends State<HomeRootScreen> {
+  HomeBloc homeBloc = HomeBloc();
+  Widget homeScreen;
+
+  NotificationBloc notificationBloc = NotificationBloc();
+  Widget notificationScreen;
+
+  ProfileBloc profileBloc = ProfileBloc();
+  Widget profileScreen;
+
+  @override
+  void initState() {
+    super.initState();
+    homeScreen = BlocProvider<HomeBloc>(
+      bloc: homeBloc,
+      child: HomeScreen(),
+    );
+
+    notificationScreen = BlocProvider<NotificationBloc>(
+      bloc: notificationBloc,
+      child: NotificationScreen(),
+    );
+
+    profileScreen = BlocProvider<ProfileBloc>(
+      bloc: profileBloc,
+      child: ProfileScreen(),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final bloc = BlocProvider.of<HomeRootBloc>(context);
@@ -72,13 +103,13 @@ class _HomeRootScreenState extends State<HomeRootScreen> {
         builder: (context, snapshot) {
           switch (snapshot.data) {
             case NavBarEnum.HOME:
-              return HomeScreen();
+              return homeScreen;
               break;
             case NavBarEnum.NOTIFICATION:
-              return NotificationScreen();
+              return notificationScreen;
               break;
             case NavBarEnum.PROFILE:
-              return ProfileScreen();
+              return profileScreen;
               break;
           }
           return Container();
