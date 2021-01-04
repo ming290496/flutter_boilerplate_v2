@@ -23,36 +23,37 @@ class _HomeScreenState extends State<HomeScreen> {
         centerTitle: true,
       ),
       body: StreamBuilder<ApiResponse<List<HomeListModel>>>(
-          stream: bloc.homeList,
-          builder: (context, snapshot) {
-            final data = snapshot.data ?? bloc.homeListValue;
+        stream: bloc.homeList,
+        builder: (context, snapshot) {
+          final data = snapshot.data ?? bloc.homeListValue;
 
-            switch (data.status) {
-              case Status.LOADING:
-                return Center(
-                  child: CircularProgressIndicator(),
-                );
-                break;
-              case Status.COMPLETED:
-                final homeList = data.data;
+          switch (data.status) {
+            case Status.LOADING:
+              return Center(
+                child: CircularProgressIndicator(),
+              );
+              break;
+            case Status.COMPLETED:
+              final homeList = data.data;
 
-                return ListView.builder(
-                  itemCount: homeList.length,
-                  itemBuilder: (context, position) {
-                    return HomeWidget(homeList[position]);
-                  },
-                );
-                break;
-              case Status.ERROR:
-                return Center(
-                  child: Text(data.message),
-                );
-                break;
-              default:
-                return Container();
-                break;
-            }
-          }),
+              return ListView.builder(
+                itemCount: homeList.length,
+                itemBuilder: (context, position) {
+                  return HomeWidget(homeList[position]);
+                },
+              );
+              break;
+            case Status.ERROR:
+              return Center(
+                child: Text(data.message),
+              );
+              break;
+            default:
+              return Container();
+              break;
+          }
+        },
+      ),
     );
   }
 }

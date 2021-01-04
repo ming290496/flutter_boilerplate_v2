@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_skeleton_v2/src/models/notification/notification_list_response_model.dart';
 
 class NotificationWidget extends StatelessWidget {
+  final NotificationListModel data;
+
+  NotificationWidget(this.data);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,8 +28,7 @@ class NotificationWidget extends StatelessWidget {
           Row(
             children: [
               CircleAvatar(
-                backgroundImage:
-                    NetworkImage('https://i.pravatar.cc/150?img=3'),
+                backgroundImage: NetworkImage(data.author.avatarUrl),
                 backgroundColor: Colors.grey,
                 radius: 30,
               ),
@@ -37,7 +41,7 @@ class NotificationWidget extends StatelessWidget {
                   children: [
                     RichText(
                       text: TextSpan(
-                        text: 'John Doe',
+                        text: '${data.author.name} ',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 18,
@@ -45,7 +49,7 @@ class NotificationWidget extends StatelessWidget {
                         ),
                         children: <TextSpan>[
                           TextSpan(
-                            text: ' posted on his timeline',
+                            text: data.title,
                             style: TextStyle(
                               fontWeight: FontWeight.normal,
                               fontSize: 18,
@@ -56,7 +60,7 @@ class NotificationWidget extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      '02:39 AM',
+                      data.date,
                       style: TextStyle(
                         color: Colors.grey,
                       ),

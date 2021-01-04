@@ -13,7 +13,12 @@ class HomeRootScreen extends StatefulWidget {
   _HomeRootScreenState createState() => _HomeRootScreenState();
 }
 
-class _HomeRootScreenState extends State<HomeRootScreen> {
+class _HomeRootScreenState extends State<HomeRootScreen>
+    with AutomaticKeepAliveClientMixin {
+  @override
+  // TODO: implement wantKeepAlive
+  bool get wantKeepAlive => true;
+
   HomeBloc homeBloc = HomeBloc();
   Widget homeScreen;
 
