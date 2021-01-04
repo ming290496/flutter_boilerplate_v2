@@ -41,44 +41,24 @@ class _HomeRootScreenState extends State<HomeRootScreen> {
               ),
               BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.event_note,
+                  Icons.notifications,
                   size: kToolbarHeight * 0.35,
                 ),
                 title: Padding(
                   padding: EdgeInsets.only(top: 2),
-                  child: Text('ARTIKEL'),
+                  child: Text('NOTIFICATION'),
                 ),
               ),
               BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.person_add,
+                  Icons.person,
                   size: kToolbarHeight * 0.35,
                 ),
                 title: Padding(
                   padding: EdgeInsets.only(top: 2),
-                  child: Text('ADD'),
+                  child: Text('PROFILE'),
                 ),
               ),
-              BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.headset,
-                  size: kToolbarHeight * 0.35,
-                ),
-                title: Padding(
-                  padding: EdgeInsets.only(top: 2),
-                  child: Text('MEDIA'),
-                ),
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.people,
-                  size: kToolbarHeight * 0.35,
-                ),
-                title: Padding(
-                  padding: EdgeInsets.only(top: 2),
-                  child: Text('PROFIL'),
-                ),
-              )
             ],
           );
         },
@@ -89,33 +69,19 @@ class _HomeRootScreenState extends State<HomeRootScreen> {
         builder: (context, snapshot) {
           switch (snapshot.data) {
             case NavBarEnum.HOME:
-//                        homeBloc.homeRootArgument = bloc.argument;
               return Center(
                 child: Text('HOME'),
               );
               break;
-            case NavBarEnum.ARTICLE:
+            case NavBarEnum.NOTIFICATION:
               return Center(
-                child: Text('ARTICLE'),
+                child: Text('NOTIFICATION'),
               );
-              ;
-              break;
-            case NavBarEnum.ADD:
-              return Center(
-                child: Text('ADD'),
-              );
-              break;
-            case NavBarEnum.MEDIA:
-              return Center(
-                child: Text('MEDIA'),
-              );
-              ;
               break;
             case NavBarEnum.PROFILE:
               return Center(
                 child: Text('PROFILE'),
               );
-              ;
               break;
           }
           return Container();

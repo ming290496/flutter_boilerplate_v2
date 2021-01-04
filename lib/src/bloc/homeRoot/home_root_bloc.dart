@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_skeleton_v2/src/bloc/bloc.dart';
 import 'package:rxdart/rxdart.dart';
 
-enum NavBarEnum { HOME, ARTICLE, ADD, MEDIA, PROFILE }
+enum NavBarEnum { HOME, NOTIFICATION, PROFILE }
 
 class HomeRootBloc implements Bloc {
   BuildContext context;
@@ -21,15 +21,9 @@ class HomeRootBloc implements Bloc {
         changeNavBar(NavBarEnum.HOME);
         break;
       case 1:
-        changeNavBar(NavBarEnum.ARTICLE);
+        changeNavBar(NavBarEnum.NOTIFICATION);
         break;
       case 2:
-        changeNavBar(NavBarEnum.ADD);
-        break;
-      case 3:
-        changeNavBar(NavBarEnum.MEDIA);
-        break;
-      case 4:
         changeNavBar(NavBarEnum.PROFILE);
         break;
     }
@@ -40,17 +34,11 @@ class HomeRootBloc implements Bloc {
       case NavBarEnum.HOME:
         return 0;
         break;
-      case NavBarEnum.ARTICLE:
+      case NavBarEnum.NOTIFICATION:
         return 1;
         break;
-      case NavBarEnum.ADD:
-        return 2;
-        break;
-      case NavBarEnum.MEDIA:
-        return 3;
-        break;
       case NavBarEnum.PROFILE:
-        return 4;
+        return 2;
         break;
       default:
         return 0;
