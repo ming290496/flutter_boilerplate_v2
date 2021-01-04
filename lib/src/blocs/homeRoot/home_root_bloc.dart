@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_skeleton_v2/src/bloc/bloc.dart';
+import 'package:flutter_skeleton_v2/src/blocs/bloc.dart';
 import 'package:rxdart/rxdart.dart';
 
 enum NavBarEnum { HOME, NOTIFICATION, PROFILE }

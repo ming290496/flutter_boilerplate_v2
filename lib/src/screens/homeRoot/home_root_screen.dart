@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_skeleton_v2/src/bloc/bloc_provider.dart';
-import 'package:flutter_skeleton_v2/src/bloc/homeRoot/home_root_bloc.dart';
-import 'package:flutter_skeleton_v2/src/screen/home/home_screen.dart';
-import 'package:flutter_skeleton_v2/src/screen/notification/notification_screen.dart';
-import 'package:flutter_skeleton_v2/src/screen/profile/profile_screen.dart';
+import 'package:flutter_skeleton_v2/src/blocs/bloc_provider.dart';
+import 'package:flutter_skeleton_v2/src/blocs/homeRoot/home_root_bloc.dart';
+import 'package:flutter_skeleton_v2/src/screens/home/home_screen.dart';
+import 'package:flutter_skeleton_v2/src/screens/notification/notification_screen.dart';
+import 'package:flutter_skeleton_v2/src/screens/profile/profile_screen.dart';
 
 class HomeRootScreen extends StatefulWidget {
   @override
