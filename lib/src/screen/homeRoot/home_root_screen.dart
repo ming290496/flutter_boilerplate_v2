@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_skeleton_v2/src/bloc/bloc_provider.dart';
 import 'package:flutter_skeleton_v2/src/bloc/homeRoot/home_root_bloc.dart';
+import 'package:flutter_skeleton_v2/src/screen/home/home_screen.dart';
+import 'package:flutter_skeleton_v2/src/screen/notification/notification_screen.dart';
+import 'package:flutter_skeleton_v2/src/screen/profile/profile_screen.dart';
 
 class HomeRootScreen extends StatefulWidget {
   @override
@@ -69,19 +72,13 @@ class _HomeRootScreenState extends State<HomeRootScreen> {
         builder: (context, snapshot) {
           switch (snapshot.data) {
             case NavBarEnum.HOME:
-              return Center(
-                child: Text('HOME'),
-              );
+              return HomeScreen();
               break;
             case NavBarEnum.NOTIFICATION:
-              return Center(
-                child: Text('NOTIFICATION'),
-              );
+              return NotificationScreen();
               break;
             case NavBarEnum.PROFILE:
-              return Center(
-                child: Text('PROFILE'),
-              );
+              return ProfileScreen();
               break;
           }
           return Container();
