@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_skeleton_v2/src/models/home/home_list_response_model.dart';
 
 class HomeWidget extends StatelessWidget {
+  final HomeListModel data;
+
+  HomeWidget(this.data);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,8 +28,7 @@ class HomeWidget extends StatelessWidget {
           Row(
             children: [
               CircleAvatar(
-                backgroundImage:
-                    NetworkImage('https://i.pravatar.cc/150?img=3'),
+                backgroundImage: NetworkImage(data.author.avatarUrl),
                 backgroundColor: Colors.grey,
                 radius: 30,
               ),
@@ -36,14 +40,14 @@ class HomeWidget extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     Text(
-                      'John Doe',
+                      data.author.name,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
                       ),
                     ),
                     Text(
-                      '3 days ago',
+                      data.date,
                       style: TextStyle(
                         color: Colors.grey,
                       ),
@@ -54,7 +58,7 @@ class HomeWidget extends StatelessWidget {
               IconButton(
                 onPressed: () {},
                 icon: Icon(
-                  Icons.bookmark_border,
+                  data.isBookmark ? Icons.bookmark : Icons.bookmark_border,
                   size: 35,
                   color: Colors.grey,
                 ),
@@ -65,14 +69,14 @@ class HomeWidget extends StatelessWidget {
             height: 16,
           ),
           Text(
-            'Aliquam Condimentum Facilisis Ente Et.',
+            data.title,
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 20,
             ),
           ),
           Text(
-            'Nam consectetur magna in pharetra euismod. Proin mauris metus, semper nec euismod non, mollis et nisl. Phasellus elementum volutpat arcu at porttitor.',
+            data.shortDescription,
             style: TextStyle(
               color: Colors.grey,
               fontSize: 18,
@@ -85,14 +89,14 @@ class HomeWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Icon(
-                Icons.favorite_border,
+                data.isFavorite ? Icons.favorite : Icons.favorite_border,
                 color: Colors.red,
               ),
               SizedBox(
                 width: 5,
               ),
               Text(
-                '123',
+                data.totalFavorite.toString(),
                 style: TextStyle(
                   color: Colors.grey,
                   fontSize: 18,

@@ -1,18 +1,18 @@
-class HomeResponseModel {
+class HomeListResponseModel {
   int status;
   bool acknowledge;
-  List<Data> data;
+  List<HomeListModel> data;
   String info;
 
-  HomeResponseModel({this.status, this.acknowledge, this.data, this.info});
+  HomeListResponseModel({this.status, this.acknowledge, this.data, this.info});
 
-  HomeResponseModel.fromJson(Map<String, dynamic> json) {
+  HomeListResponseModel.fromJson(Map<String, dynamic> json) {
     status = json['status'];
     acknowledge = json['acknowledge'];
     if (json['data'] != null) {
-      data = new List<Data>();
+      data = new List<HomeListModel>();
       json['data'].forEach((v) {
-        data.add(new Data.fromJson(v));
+        data.add(new HomeListModel.fromJson(v));
       });
     }
     info = json['info'];
@@ -30,7 +30,7 @@ class HomeResponseModel {
   }
 }
 
-class Data {
+class HomeListModel {
   Author author;
   String title;
   String date;
@@ -40,7 +40,7 @@ class Data {
   bool isFavorite;
   int totalFavorite;
 
-  Data(
+  HomeListModel(
       {this.author,
         this.title,
         this.date,
@@ -50,7 +50,7 @@ class Data {
         this.isFavorite,
         this.totalFavorite});
 
-  Data.fromJson(Map<String, dynamic> json) {
+  HomeListModel.fromJson(Map<String, dynamic> json) {
     author =
     json['author'] != null ? new Author.fromJson(json['author']) : null;
     title = json['title'];

@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/services.dart';
-import 'package:flutter_skeleton_v2/src/models/home_response_model.dart';
+import 'package:flutter_skeleton_v2/src/models/home/home_list_response_model.dart';
 import 'package:flutter_skeleton_v2/src/resources/api_helper.dart';
 
 class Repository {
@@ -11,9 +11,9 @@ class Repository {
   static const String HOME = 'ea467f7a-a7b9-4627-99d9-38636ba2adb9/';
 
   //GET
-  Future<HomeResponseModel> getHomeList() async {
+  Future<HomeListResponseModel> getHomeList() async {
     final response = await apiProvider.get(HOME);
-    final result = HomeResponseModel.fromJson(response);
+    final result = HomeListResponseModel.fromJson(response);
     return result;
   }
 }
