@@ -1,4 +1,4 @@
-# Flutter Skeleton Version 2
+# Flutter Boilerplate Version 2
 
 A mobile app project created in flutter using BLOC architecture and reactive programming. This project support iOS and Android devices.
 
