@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_skeleton_v2/src/blocs/bloc.dart';
-import 'package:flutter_skeleton_v2/src/models/notification/notification_list_response_model.dart';
-import 'package:flutter_skeleton_v2/src/resources/api_response.dart';
-import 'package:flutter_skeleton_v2/src/resources/repository.dart';
+import 'package:flutter_boilerplate_v2/src/blocs/bloc.dart';
+import 'package:flutter_boilerplate_v2/src/models/notification/notification_list_response_model.dart';
+import 'package:flutter_boilerplate_v2/src/resources/api_response.dart';
+import 'package:flutter_boilerplate_v2/src/resources/repository.dart';
 import 'package:rxdart/rxdart.dart';
 
 class NotificationBloc extends Bloc {

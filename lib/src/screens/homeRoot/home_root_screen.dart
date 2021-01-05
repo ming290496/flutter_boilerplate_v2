@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_skeleton_v2/src/blocs/bloc_provider.dart';
-import 'package:flutter_skeleton_v2/src/blocs/home/home_bloc.dart';
-import 'package:flutter_skeleton_v2/src/blocs/homeRoot/home_root_bloc.dart';
-import 'package:flutter_skeleton_v2/src/blocs/notification/notification_bloc.dart';
-import 'package:flutter_skeleton_v2/src/blocs/profile/profile_bloc.dart';
-import 'package:flutter_skeleton_v2/src/screens/home/home_screen.dart';
-import 'package:flutter_skeleton_v2/src/screens/notification/notification_screen.dart';
-import 'package:flutter_skeleton_v2/src/screens/profile/profile_screen.dart';
+import 'package:flutter_boilerplate_v2/src/blocs/bloc_provider.dart';
+import 'package:flutter_boilerplate_v2/src/blocs/home/home_bloc.dart';
+import 'package:flutter_boilerplate_v2/src/blocs/homeRoot/home_root_bloc.dart';
+import 'package:flutter_boilerplate_v2/src/blocs/notification/notification_bloc.dart';
+import 'package:flutter_boilerplate_v2/src/blocs/profile/profile_bloc.dart';
+import 'package:flutter_boilerplate_v2/src/screens/home/home_screen.dart';
+import 'package:flutter_boilerplate_v2/src/screens/notification/notification_screen.dart';
+import 'package:flutter_boilerplate_v2/src/screens/profile/profile_screen.dart';
 
 class HomeRootScreen extends StatefulWidget {
   @override

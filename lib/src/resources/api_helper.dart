@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
-import 'package:flutter_skeleton_v2/src/resources/configs.dart';
-import 'package:flutter_skeleton_v2/src/utilities/app_exceptions.dart';
+import 'package:flutter_boilerplate_v2/src/resources/configs.dart';
+import 'package:flutter_boilerplate_v2/src/utilities/app_exceptions.dart';
 import 'package:http/http.dart' as client;
 import 'dart:async';
 

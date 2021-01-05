@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_skeleton_v2/src/blocs/bloc_provider.dart';
-import 'package:flutter_skeleton_v2/src/blocs/home/home_bloc.dart';
-import 'package:flutter_skeleton_v2/src/models/home/home_list_response_model.dart';
-import 'package:flutter_skeleton_v2/src/resources/api_response.dart';
-import 'package:flutter_skeleton_v2/src/widgets/home/home_widget.dart';
+import 'package:flutter_boilerplate_v2/src/blocs/bloc_provider.dart';
+import 'package:flutter_boilerplate_v2/src/blocs/home/home_bloc.dart';
+import 'package:flutter_boilerplate_v2/src/models/home/home_list_response_model.dart';
+import 'package:flutter_boilerplate_v2/src/resources/api_response.dart';
+import 'package:flutter_boilerplate_v2/src/widgets/home/home_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   @override

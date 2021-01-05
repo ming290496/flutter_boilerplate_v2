@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:flutter_skeleton_v2/src/constants/app_enum.dart';
+import 'package:flutter_boilerplate_v2/src/constants/app_enum.dart';
 
 class Configs {
 // IMPORTANT! CHECK BEFORE BUILD

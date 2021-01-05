@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_skeleton_v2/src/models/notification/notification_list_response_model.dart';
+import 'package:flutter_boilerplate_v2/src/models/notification/notification_list_response_model.dart';
 
 class NotificationWidget extends StatelessWidget {
   final NotificationListModel data;

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_skeleton_v2/src/blocs/bloc_provider.dart';
-import 'package:flutter_skeleton_v2/src/blocs/notification/notification_bloc.dart';
-import 'package:flutter_skeleton_v2/src/models/notification/notification_list_response_model.dart';
-import 'package:flutter_skeleton_v2/src/resources/api_response.dart';
-import 'package:flutter_skeleton_v2/src/widgets/notification/notification_widget.dart';
+import 'package:flutter_boilerplate_v2/src/blocs/bloc_provider.dart';
+import 'package:flutter_boilerplate_v2/src/blocs/notification/notification_bloc.dart';
+import 'package:flutter_boilerplate_v2/src/models/notification/notification_list_response_model.dart';
+import 'package:flutter_boilerplate_v2/src/resources/api_response.dart';
+import 'package:flutter_boilerplate_v2/src/widgets/notification/notification_widget.dart';
 
 class NotificationScreen extends StatefulWidget {
   @override

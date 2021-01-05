@@ -1,10 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/services.dart';
-import 'package:flutter_skeleton_v2/src/models/home/home_list_response_model.dart';
-import 'package:flutter_skeleton_v2/src/models/notification/notification_list_response_model.dart';
-import 'package:flutter_skeleton_v2/src/models/profile/profile_detail_response_model.dart';
-import 'package:flutter_skeleton_v2/src/resources/api_helper.dart';
+import 'package:flutter_boilerplate_v2/src/models/home/home_list_response_model.dart';
+import 'package:flutter_boilerplate_v2/src/models/notification/notification_list_response_model.dart';
+import 'package:flutter_boilerplate_v2/src/models/profile/profile_detail_response_model.dart';
+import 'package:flutter_boilerplate_v2/src/resources/api_helper.dart';
 
 class Repository {
   ApiHelper apiProvider = ApiHelper();
