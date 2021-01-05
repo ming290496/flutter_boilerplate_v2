@@ -19,7 +19,7 @@ samples, guidance on mobile development, and a full API reference.
 
 Please feel free to contribute by adding new templates to this project:
 
-1. Fork the project (<https://github.com/ming290496/flutter_skeleton_v2>)
+1. Fork the project (<https://github.com/ming290496/flutter_boilerplate_v2>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
@@ -29,4 +29,4 @@ Please feel free to contribute by adding new templates to this project:
 
 Please feel free to ask your question, submit issue or share your suggestion about this project by clicking the link below:
 
-* [Submit question, issue or suggestion](https://github.com/ming290496/flutter_skeleton_v2/issues)
+* [Submit question, issue or suggestion](https://github.com/ming290496/flutter_boilerplate_v2/issues)
