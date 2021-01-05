@@ -1,6 +1,6 @@
 # Flutter Skeleton Version 2
 
-A mobile project created in flutter using BLOC architecture and reactive programming. This project support iOS and Android devices.
+A mobile app project created in flutter using BLOC architecture and reactive programming. This project support iOS and Android devices.
 
 ## Getting Started
 
